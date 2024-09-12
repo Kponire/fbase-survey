@@ -1,7 +1,10 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@mantine/core/styles.css";
+import '@mantine/notifications/styles.css';
+import '@mantine/dropzone/styles.css';
+import { MantineProvider } from "@mantine/core";
+import { Notifications } from '@mantine/notifications';
+import { theme } from "../theme";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +14,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, user-scalable=no"
+        />
+      <body>
+        <MantineProvider theme={theme}>
+          <Notifications />
+          {children}
+        </MantineProvider>
+      </body>
     </html>
   );
 }

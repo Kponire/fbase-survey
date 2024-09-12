@@ -1,0 +1,356 @@
+.checkbox {
+  color: #E8F8FF;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: var(--mantine-color-primary-0);
+}
+
+.sideForm {
+  width: 55%;
+  min-height: 100vh;
+  padding: 130px 180px;
+  gap: 62px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(3, 14, 27, 0.9);
+  box-shadow: 0px 8px 40px 4px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  width: 141.6px;
+  height: 20px;
+  position: absolute;
+  top: 32px;
+  left: 40px;
+}
+
+.sideImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0E3465;
+  mix-blend-mode: overlay;
+  opacity: 0.8;
+}
+
+.sideImage {
+  background: url('/img.png');
+  background-size: cover;
+  background-position: center;
+  width: 45%;
+  position: relative;
+}
+
+.title {
+  width: 380px;
+  height: 40px;
+  margin-bottom: 62px;
+  font-family: 'Core Sans C';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #14B8FF;
+}
+
+.formCon {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;    
+  width: 380px;
+  gap: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px !important;
+}
+
+.formSection {
+  padding: 0;
+}
+
+.formHeading {
+  font-family: 'Core Sans C';
+  font-weight: bold;
+  font-size: 24px;
+  color: #14B8FF;
+}
+
+.formSubHeading {
+  font-family: 'Core Sans C';
+  font-size: 16px;
+  color: #E8F8FF;
+  margin-bottom: 0;
+}
+
+.input {
+  background-color: inherit;
+  color: white;
+  box-sizing: border-box;
+  gap: 10px; 
+  width: 380px;
+  height: 38px; 
+  border: 2px solid var(--mantine-color-secondary-2);
+  border-radius: 2px;
+  padding: 8px;
+  font-family: 'Core Sans C';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;       
+  &::placeholder {
+    font-family: 'Core Sans C';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;    
+    color: white;    
+  }  
+}
+
+.areaInput {
+  border: 2px solid var(--mantine-color-secondary-2);
+  border-radius: 2px;
+  padding: 8px;
+  font-family: 'Core Sans C';
+  font-style: normal;
+  color: #0E3465;
+  &::placeholder {
+    font-family: 'Core Sans C';
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 140%;    
+    color: #0E3465;
+    
+  }   
+}
+
+.label {
+  font-family: 'Core Sans C';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  line-height: 100%;
+  height: 14px;  
+}
+
+.placeholder {
+  font-family: 'Core Sans C';
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  color: red; /* Set the color to red */
+  background: red;
+}
+
+.mantine-FileInput-placeholder {
+  color: red !important; /* Force placeholder text to be red */
+}
+
+
+.remove {
+  width: 380px;
+  font-family: 'Core Sans C', sans-serif;
+  font-style: normal;
+  font-weight: 500;  
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+  color: #14B8FF;
+  text-decoration: underline;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.submitButton {
+  font-family: 'Core Sans C';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: capitalize; 
+  color: #FFFFFF;
+  width: 380px;
+  margin-top: 8px;
+  min-width: 144px;
+  background: var(--mantine-color-primary-1);
+  border-radius: 2px;
+}
+
+.submitButton:hover {
+  background: var(--mantine-color-primary-1);
+}
+.stepperContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  padding-top: 100px;
+  z-index: 3;
+  left: 58%;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  max-width: calc(100% / 5);
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: var(--mantine-color-primary-1);
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.stepIcon {
+  border-color: #14B8FF;
+}
+
+.completedStep {
+  background-color: #14B8FF;
+  border-radius: 100%;
+}
+
+.completedStep .stepNumber {
+  background-color: #0E3465;
+}
+
+.stepLabel {
+  font-family: 'Core Sans C';
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  /* color: #4A678B; */
+  margin-top: 4px;
+}
+
+.stepDescription {
+  font-family: 'Core Sans C';
+  font-size: 12px;
+  color: var(--mantine-color-secondary-2);
+}
+
+.stepLine {
+  position: absolute;
+  top: 20px;
+  left: calc(50% + 20px);
+  right: -50%;
+  height: 2px;
+  background-color: var(--mantine-color-primary-1);
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+
+.activeStep ~ .step .stepLine {
+  background-color: #E0E0E0; /* Gray line for upcoming steps */
+}
+
+.step:last-child .stepLine {
+  display: none;
+}
+
+.progressContainer {
+  
+  margin-top: 16px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #E0E0E0;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #14B8FF;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.stepnum {
+  display: none;
+  font-family: 'Core Sans C';
+  font-weight: 600;
+  font-size: 24px;
+  color: white;  
+}
+
+.displayStep {
+  position: absolute;
+  top: 54px;
+  right: 40px;
+  color: #FFFFFF;
+  border: 2px solid red;
+}
+
+.thankYouMessage {
+  text-align: center;
+  font-family: 'Core Sans C';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  color: #14B8FF;
+}
+
+.thankYouText {
+  color: #FFFFFF;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sideForm {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .stepperContainer {
+    display: none;
+  }
+
+  .sideImage {
+    display: none;
+    width: 100%;
+    height: 50vh;
+  }
+
+  .stepnum {
+    display: block;
+  }
+}
